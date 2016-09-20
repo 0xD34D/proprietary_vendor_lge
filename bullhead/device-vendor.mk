@@ -1,9 +1,3 @@
-PRODUCT_PACKAGES += \
-    atfwd \
-    qcrilmsgtunnel \
-    CNEService \
-    qcrilhook
-
 PRODUCT_COPY_FILES += \
     vendor/lge/bullhead/proprietary/etc/flp.conf:system/etc/flp.conf \
     vendor/lge/bullhead/proprietary/etc/qcril.db:system/etc/qcril.db \
@@ -19,7 +13,6 @@ PRODUCT_COPY_FILES += \
     vendor/lge/bullhead/proprietary/etc/permissions/rcsservice.xml:system/etc/permissions/rcsservice.xml \
     vendor/lge/bullhead/proprietary/etc/permissions/qti_permissions.xml:system/etc/permissions/qti_permissions.xml \
     vendor/lge/bullhead/proprietary/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
-    vendor/lge/bullhead/proprietary/etc/permissions/com.google.widevine.software.drm.xml:system/etc/permissions/com.google.widevine.software.drm.xml \
     vendor/lge/bullhead/proprietary/etc/permissions/cneapiclient.xml:system/etc/permissions/cneapiclient.xml \
     vendor/lge/bullhead/proprietary/etc/sap.conf:system/etc/sap.conf \
     vendor/lge/bullhead/proprietary/etc/data/dsi_config.xml:system/etc/data/dsi_config.xml \
@@ -37,14 +30,12 @@ PRODUCT_COPY_FILES += \
     vendor/lge/bullhead/proprietary/bin/ims_rtp_daemon:system/bin/ims_rtp_daemon \
     vendor/lge/bullhead/proprietary/bin/loc_launcher:system/bin/loc_launcher \
     vendor/lge/bullhead/proprietary/bin/imsdatadaemon:system/bin/imsdatadaemon \
-    vendor/lge/bullhead/proprietary/bin/qmuxd:system/bin/qmuxd \
     vendor/lge/bullhead/proprietary/bin/diag_mdlog:system/bin/diag_mdlog \
     vendor/lge/bullhead/proprietary/bin/ATFWD-daemon:system/bin/ATFWD-daemon \
     vendor/lge/bullhead/proprietary/bin/imsqmidaemon:system/bin/imsqmidaemon \
     vendor/lge/bullhead/proprietary/bin/qmakernote-xtract:system/bin/qmakernote-xtract \
     vendor/lge/bullhead/proprietary/bin/msm_irqbalance:system/bin/msm_irqbalance \
     vendor/lge/bullhead/proprietary/bin/btnvtool:system/bin/btnvtool \
-    vendor/lge/bullhead/proprietary/bin/nanoapp_cmd:system/bin/nanoapp_cmd \
     vendor/lge/bullhead/proprietary/bin/cnd:system/bin/cnd \
     vendor/lge/bullhead/proprietary/bin/nl_listener:system/bin/nl_listener \
     vendor/lge/bullhead/proprietary/bin/diag_klog:system/bin/diag_klog \
@@ -57,34 +48,24 @@ PRODUCT_COPY_FILES += \
     vendor/lge/bullhead/proprietary/bin/wcnss_filter:system/bin/wcnss_filter \
     vendor/lge/bullhead/proprietary/bin/rmt_storage:system/bin/rmt_storage \
     vendor/lge/bullhead/proprietary/bin/lowi-server:system/bin/lowi-server \
+    vendor/lge/bullhead/proprietary/bin/qmuxd:system/bin/qmuxd \
     vendor/lge/bullhead/proprietary/framework/qcrilhook.jar:system/framework/qcrilhook.jar \
     vendor/lge/bullhead/proprietary/framework/rcsservice.jar:system/framework/rcsservice.jar \
-    vendor/lge/bullhead/proprietary/framework/com.google.widevine.software.drm.jar:system/framework/com.google.widevine.software.drm.jar \
     vendor/lge/bullhead/proprietary/framework/cneapiclient.jar:system/framework/cneapiclient.jar \
     vendor/lge/bullhead/proprietary/framework/rcsimssettings.jar:system/framework/rcsimssettings.jar \
     vendor/lge/bullhead/proprietary/lib64/libloc_eng.so:system/lib64/libloc_eng.so \
     vendor/lge/bullhead/proprietary/lib64/lib_fpc_tac_shared.so:system/lib64/lib_fpc_tac_shared.so \
     vendor/lge/bullhead/proprietary/lib64/libgps.utils.so:system/lib64/libgps.utils.so \
-    vendor/lge/bullhead/proprietary/lib64/libloc_ds_api.so:system/lib64/libloc_ds_api.so \
     vendor/lge/bullhead/proprietary/lib64/libloc_core.so:system/lib64/libloc_core.so \
-    vendor/lge/bullhead/proprietary/lib64/libhubconnection.so:system/lib64/libhubconnection.so \
-    vendor/lge/bullhead/proprietary/lib64/hw/nfc_nci.bullhead.so:system/lib64/hw/nfc_nci.bullhead.so \
-    vendor/lge/bullhead/proprietary/lib64/hw/context_hub.default.so:system/lib64/hw/context_hub.default.so \
-    vendor/lge/bullhead/proprietary/lib64/hw/activity_recognition.bullhead.so:system/lib64/hw/activity_recognition.bullhead.so \
-    vendor/lge/bullhead/proprietary/lib64/hw/sensors.bullhead.so:system/lib64/hw/sensors.bullhead.so \
+    vendor/lge/bullhead/proprietary/lib64/libloc_api_v02.so:system/lib64/libloc_api_v02.so \
+    vendor/lge/bullhead/proprietary/lib64/libloc_ds_api.so:system/lib64/libloc_ds_api.so \
     vendor/lge/bullhead/proprietary/lib64/hw/gps.msm8992.so:system/lib64/hw/gps.msm8992.so \
     vendor/lge/bullhead/proprietary/lib64/hw/fingerprint.bullhead.so:system/lib64/hw/fingerprint.bullhead.so \
-    vendor/lge/bullhead/proprietary/lib64/libloc_api_v02.so:system/lib64/libloc_api_v02.so \
     vendor/lge/bullhead/proprietary/lib/libloc_eng.so:system/lib/libloc_eng.so \
     vendor/lge/bullhead/proprietary/lib/lib_fpc_tac_shared.so:system/lib/lib_fpc_tac_shared.so \
     vendor/lge/bullhead/proprietary/lib/libgps.utils.so:system/lib/libgps.utils.so \
-    vendor/lge/bullhead/proprietary/lib/libloc_ds_api.so:system/lib/libloc_ds_api.so \
     vendor/lge/bullhead/proprietary/lib/libloc_core.so:system/lib/libloc_core.so \
-    vendor/lge/bullhead/proprietary/lib/libhubconnection.so:system/lib/libhubconnection.so \
-    vendor/lge/bullhead/proprietary/lib/hw/nfc_nci.bullhead.so:system/lib/hw/nfc_nci.bullhead.so \
-    vendor/lge/bullhead/proprietary/lib/hw/context_hub.default.so:system/lib/hw/context_hub.default.so \
-    vendor/lge/bullhead/proprietary/lib/hw/activity_recognition.bullhead.so:system/lib/hw/activity_recognition.bullhead.so \
-    vendor/lge/bullhead/proprietary/lib/hw/sensors.bullhead.so:system/lib/hw/sensors.bullhead.so \
+    vendor/lge/bullhead/proprietary/lib/libloc_api_v02.so:system/lib/libloc_api_v02.so \
+    vendor/lge/bullhead/proprietary/lib/libloc_ds_api.so:system/lib/libloc_ds_api.so \
     vendor/lge/bullhead/proprietary/lib/hw/gps.msm8992.so:system/lib/hw/gps.msm8992.so \
-    vendor/lge/bullhead/proprietary/lib/hw/fingerprint.bullhead.so:system/lib/hw/fingerprint.bullhead.so \
-    vendor/lge/bullhead/proprietary/lib/libloc_api_v02.so:system/lib/libloc_api_v02.so
+    vendor/lge/bullhead/proprietary/lib/hw/fingerprint.bullhead.so:system/lib/hw/fingerprint.bullhead.so
